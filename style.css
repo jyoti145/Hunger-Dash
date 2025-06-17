@@ -1,0 +1,478 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* --- Navbar --- */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1.5px solid #f0f0f0;
+  background: #fff;
+    padding: 0 120px;
+  height: 120px;
+  box-shadow: 0 2px 8px rgba(252, 128, 25, 0.04);
+}
+
+.logo {
+  width: 520px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.nav-items ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-items ul li {
+  font-size: 18px;
+  font-weight: 600;
+  color: #282c3f;
+  cursor: pointer;
+  transition: color 0.2s;
+  position: relative;
+}
+
+.nav-items ul li:hover {
+  color: #fc8019;
+}
+
+.login-btn {
+  padding: 10px 28px;
+  background-color: #fff;
+  color: #fc8019;
+  border-radius: 8px;
+  border: 2px solid #fc8019;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 24px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.login-btn:hover {
+  background-color: #fc8019;
+  color: #fff;
+}
+
+/* --- Body & Card Layout --- */
+.body {
+  margin-top: 32px;
+  padding: 0 40px 40px 40px;
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+.resto-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 22px;
+  justify-content: center;
+  width: 100%;
+}
+
+.resto-card {
+  width: 260px;
+  min-height: 340px;
+  padding: 0;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 0 2px 16px rgba(40,44,63,0.07);
+  text-align: left;
+  transition: box-shadow 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: none;
+  position: relative;
+}
+
+.resto-card:hover {
+  box-shadow: 0 8px 24px rgba(252,128,25,0.13);
+  transform: translateY(-4px) scale(1.03);
+  cursor: pointer;
+}
+
+.resto-logo {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  background: #f0f0f0;
+}
+
+.resto-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 16px 16px 4px 16px;
+  color: #282c3f;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.resto-card h4 {
+  margin: 4px 16px;
+  font-size: 15px;
+  color: #686b78;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.resto-card h4:last-child {
+  margin-bottom: 16px;
+}
+
+/* --- Filter/Search Row --- */
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 32px;
+  background: #f3f3f3;
+  padding: 20px 32px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(252, 128, 25, 0.04);
+  width: 100%;          
+  min-width: 0;
+  margin-left: 0;       
+  margin-right: 0;
+  justify-content: flex-start; 
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.search-input {
+  padding: 14px 12px;
+  border: 1.5px solid #e2e2e2;
+  border-radius: 8px;
+  font-size: 17px;
+  outline: none;
+  width:180px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background: #fff;
+  color: #222;
+  box-shadow: 0 2px 8px rgba(252, 128, 25, 0.03);
+}
+
+.search-input:focus {
+  border-color: #fc8019;
+  box-shadow: 0 0 0 2px rgba(252, 128, 25, 0.15);
+}
+
+.search-btn {
+  padding: 14px 20px;
+  background-color: #fc8019;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 600;
+  margin-left: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(252, 128, 25, 0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.search-btn:hover {
+  background-color: #ff9933;
+  box-shadow: 0 4px 16px rgba(252, 128, 25, 0.15);
+}
+
+.filter-btn {
+  padding: 14px 20px;
+  background: #fff;
+  color: #fc8019;
+  border-radius: 8px;
+  border: 2px solid #fc8019;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+  margin-left: 16px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.filter-btn:hover {
+  background: #fc8019;
+  color: #fff;
+}
+
+/* --- Shimmer (Loading) --- */
+.shimmer-navbar {
+  width: 100%;
+  height: 56px;
+  background: #f6f7f8;
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.shimmer-filter-row {
+  display: flex;
+  gap: 16px;
+  margin: 0 0 24px 0;
+  justify-content: center;
+}
+.shimmer-search {
+  width: 260px;
+  height: 38px;
+  border-radius: 8px;
+  background: #f6f7f8;
+  position: relative;
+  overflow: hidden;
+}
+.shimmer-btn {
+  width: 160px;
+  height: 38px;
+  border-radius: 8px;
+  background: #f6f7f8;
+  position: relative;
+  overflow: hidden;
+}
+.shimmmer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+.Shimmer-card {
+  width: 250px;
+  height: 320px;
+  background: #f6f7f8;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  position: relative;
+  overflow: hidden;
+}
+.shimmer-navbar::after,
+.shimmer-search::after,
+.shimmer-btn::after,
+.Shimmer-card::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(
+    90deg,
+    #f6f7f8 0%,
+    #edeef1 50%,
+    #f6f7f8 100%
+  );
+  animation: shimmer 1.2s infinite;
+  opacity: 0.7;
+}
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+} 
+
+
+/* Restaurant Menu Page */
+ .menu-container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(40,44,63,0.07);
+  padding: 32px 32px 40px 32px;
+} 
+
+.restaurant-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  margin-bottom: 24px;
+}
+
+.restaurant-banner {
+  width: 220px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  background: #f3f3f3;
+  box-shadow: 0 2px 8px rgba(40,44,63,0.07);
+}
+
+.restaurant-details {
+  flex: 1;
+}
+
+.restaurant-details h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: #282c3f;
+}
+
+.restaurant-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 1.1rem;
+  color: #686b78;
+  margin-top: 8px;
+}
+
+.menu-title {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin: 32px 0 18px 0;
+  color: #282c3f;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.menu-item-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background: #faf9f6;
+  border-radius: 10px;
+  padding: 18px 20px;
+  box-shadow: 0 1px 4px rgba(252,128,25,0.06);
+  transition: box-shadow 0.2s;
+}
+
+.menu-item-card:hover {
+  box-shadow: 0 4px 16px rgba(252,128,25,0.13);
+}
+
+.menu-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.menu-item-info h3 {
+  margin: 0 0 6px 0;
+  font-size: 1.2rem;
+  color: #282c3f;
+  font-weight: 600;
+}
+
+.menu-item-meta {
+  font-size: 1rem;
+  color: #686b78;
+}
+
+.menu-item-price {
+  font-weight: 600;
+  color: #fc8019;
+  margin-right: 12px;
+}
+
+.menu-item-desc {
+  margin-top: 6px;
+  color: #7e808c;
+  font-size: 0.98rem;
+}
+
+.menu-item-img-wrap {
+  margin-left: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.menu-item-img {
+  width: 100px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #f3f3f3;
+  box-shadow: 0 1px 4px rgba(40,44,63,0.07);
+}
+
+
+.resto-container a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+
+.resto-container a:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 32px 24px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.about-hero {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.about-hero h1 {
+  font-size: 2.5rem;
+  color: #fc8019;
+  margin-bottom: 12px;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.about-section {
+  margin-bottom: 28px;
+}
+
+.about-section h2 {
+  color: #222;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.about-section p, .about-section ul {
+  color: #444;
+  font-size: 1.1rem;
+}
+
+.about-section ul {
+  padding-left: 20px;
+}
+
+.about-section li {
+  margin-bottom: 8px;
+}
+
+.about-section a {
+  color: #fc8019;
+  text-decoration: none;
+}
+
+.about-section a:hover {
+  text-decoration: underline;
+}
+.header span {
+  vertical-align: middle;
+  margin-left: 12px;
+  font-size: 1rem;
+}

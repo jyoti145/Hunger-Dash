@@ -1,0 +1,4 @@
+Types of testing 
+1.Unit testing : Isolation testing like if we want to test a particular component for which we use this testing
+2.Integration testing : when multiple component talking to each other and we testing like on some event and some action that is known as this testing  
+3.End to end testing: when user landing to page and go out to the page at each flow we test that is end to end testing
