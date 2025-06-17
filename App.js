@@ -1,19 +1,19 @@
 import React , {lazy,Suspense} from "react";
 import ReactDOM from "react-dom/client";
-import Body from "./Components/Body";
-import Header from "./Components/Header";
-import RestaurantMenu from "./Components/RestaurantMenuCard";
-import About from "./Components/About";
-import Error from "./Components/Error";
-import Contact from "./Components/Contact";
+import Body from "./src/Components/Body";
+import Header from "./src/Components/Header";
+import RestaurantMenu from "./src/Components/RestaurantMenuCard";
+import About from "./src/Components/About";
+import Error from "./src/Components/Error";
+import Contact from "./src/Components/Contact";
 import { createBrowserRouter, RouterProvider , Outlet } from "react-router-dom";
 import {Provider} from "react-redux";
-import appStore from "./Utils/appStore";
-import Cart from "./Components/Cart";
-import appStore from "./Utils/appStore";
+import appStore from "./src/Utils/appStore";
+import Cart from "./src/Components/Cart";
+import appStore from "./src/Utils/appStore";
 
 
-const  Grocery = lazy(() => import("./Components/Grocery"));
+const  Grocery = lazy(() => import("./src/Components/Grocery"));
 const AppLayout = () => {
   return (
     <Provider store= {appStore}>
