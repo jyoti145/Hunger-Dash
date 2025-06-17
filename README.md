@@ -19,13 +19,17 @@ Easily browse restaurants, add items to your cart, and enjoy a seamless user exp
 
 ## 📸 **Screenshots**
 
-| Home Page | Restaurant Menu | Cart Page |
-|-----------|-----------------|-----------|
-| ![HomePage](https://github.com/user-attachments/assets/8cea9f58-a4a7-43cf-b42d-803f52f1c712)
+### Home Page
+![HomePage](https://github.com/user-attachments/assets/821d34de-2df3-4493-9ac9-e3a6abc02f16)
 
- | ![MenuPage](https://github.com/user-attachments/assets/f79ae2e0-3c15-4d25-a2b1-b7c9dfcaf896)
- | ![CartPage](https://github.com/user-attachments/assets/7f5743e7-a8c8-4393-bba6-27c75689138b)
- |
+
+### Restaurant Menu
+![MenuPage](https://github.com/user-attachments/assets/899b2958-b7ea-497f-9bb5-a0be24891b5b)
+
+
+### Cart Page
+![CartPage](https://github.com/user-attachments/assets/ec92ed1c-8ea0-48df-91ec-28a722c94cbd)
+
 
 ---
 
