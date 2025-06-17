@@ -10,7 +10,7 @@ import { createBrowserRouter, RouterProvider , Outlet } from "react-router-dom";
 import {Provider} from "react-redux";
 import appStore from "./src/utils/appStore";
 import Cart from "./src/Components/Cart";
-import appStore from "./src/utils/appStore";
+
 
 const  Grocery = lazy(() => import("./src/Components/Grocery"));
 const AppLayout = () => {
