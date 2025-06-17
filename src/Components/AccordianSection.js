@@ -1,7 +1,7 @@
 import { on } from "process";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addItem } from "../Utils/cartSlice";
+import { addItem } from "../utils/cartSlice";
 const vegIcon = (
   <span className="inline-block w-4 h-4 border-2 border-green-600 rounded-sm mr-2 align-middle">
     <span className="block w-2 h-2 bg-green-600 rounded-sm m-auto mt-1"></span>
